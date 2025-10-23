@@ -1,0 +1,24 @@
+{
+	"name": "managertriggernew1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Managerpipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/csvfiles/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/645d062f-d725-46fd-807a-f0f94828c04c/resourceGroups/declass/providers/Microsoft.Storage/storageAccounts/datafactorystoragenew",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

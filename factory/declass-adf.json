@@ -1,0 +1,9 @@
+{
+	"name": "declass-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8f23af9b-5f84-463e-aa1c-d7112fd96f78",
+		"tenantId": "458f3409-ba2d-42ac-866e-f752a14ea896"
+	}
+}
