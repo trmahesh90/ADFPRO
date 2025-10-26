@@ -1,0 +1,17 @@
+{
+	"name": "adftest",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adftestnew.database.windows.net",
+			"database": "adftest",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adminuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDczQThGNjE5LUI5QjItNEMxRi1CNDUwLUFEOUMyNURBRTBDNV8yZTZlYWQ2Ny00NzVkLTQyMjUtOWI5MC1jNTc4OWRiNWM3ZGIiDQp9"
+		}
+	}
+}
