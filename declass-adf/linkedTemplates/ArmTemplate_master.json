@@ -1,0 +1,263 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "declass-adf"
+		},
+		"client_sourcels_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'client_sourcels'"
+		},
+		"linkedservicedl_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'linkedservicedl'"
+		},
+		"ls_database_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_database'"
+		},
+		"ls_datalake_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'ls_datalake'"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/anshlambagit"
+		},
+		"client_sourcels_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"client_sourcels_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"client_sourcels_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"github_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/"
+		},
+		"linkedservicedl_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"linkedservicedl_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"linkedservicedl_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"ls_database_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adflab.database.windows.net"
+		},
+		"ls_database_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ADFpipeline"
+		},
+		"ls_database_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "superuser"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"ls_datalake_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"ls_datalake_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"ls_restAPI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://pokeapi.co/api/v2/pokemon"
+		},
+		"managertriggernew_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/645d062f-d725-46fd-807a-f0f94828c04c/resourceGroups/declass/providers/Microsoft.Storage/storageAccounts/datafactorystoragenew"
+		},
+		"managertriggernew1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/645d062f-d725-46fd-807a-f0f94828c04c/resourceGroups/declass/providers/Microsoft.Storage/storageAccounts/datafactorystoragenew"
+		},
+		"schedule_properties_Scheduledpipeline_parameters_schema": {
+			"type": "string",
+			"defaultValue": "source"
+		},
+		"schedule_properties_Scheduledpipeline_parameters_table": {
+			"type": "string",
+			"defaultValue": "Orders"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "declass-adf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"client_sourcels_servicePrincipalCredential": {
+						"value": "[parameters('client_sourcels_servicePrincipalCredential')]"
+					},
+					"linkedservicedl_servicePrincipalCredential": {
+						"value": "[parameters('linkedservicedl_servicePrincipalCredential')]"
+					},
+					"ls_database_password": {
+						"value": "[parameters('ls_database_password')]"
+					},
+					"ls_datalake_servicePrincipalCredential": {
+						"value": "[parameters('ls_datalake_servicePrincipalCredential')]"
+					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"client_sourcels_properties_typeProperties_url": {
+						"value": "[parameters('client_sourcels_properties_typeProperties_url')]"
+					},
+					"client_sourcels_properties_typeProperties_tenant": {
+						"value": "[parameters('client_sourcels_properties_typeProperties_tenant')]"
+					},
+					"client_sourcels_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('client_sourcels_properties_typeProperties_servicePrincipalId')]"
+					},
+					"github_ls_properties_typeProperties_url": {
+						"value": "[parameters('github_ls_properties_typeProperties_url')]"
+					},
+					"linkedservicedl_properties_typeProperties_url": {
+						"value": "[parameters('linkedservicedl_properties_typeProperties_url')]"
+					},
+					"linkedservicedl_properties_typeProperties_tenant": {
+						"value": "[parameters('linkedservicedl_properties_typeProperties_tenant')]"
+					},
+					"linkedservicedl_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('linkedservicedl_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_database_properties_typeProperties_server": {
+						"value": "[parameters('ls_database_properties_typeProperties_server')]"
+					},
+					"ls_database_properties_typeProperties_database": {
+						"value": "[parameters('ls_database_properties_typeProperties_database')]"
+					},
+					"ls_database_properties_typeProperties_userName": {
+						"value": "[parameters('ls_database_properties_typeProperties_userName')]"
+					},
+					"ls_datalake_properties_typeProperties_url": {
+						"value": "[parameters('ls_datalake_properties_typeProperties_url')]"
+					},
+					"ls_datalake_properties_typeProperties_tenant": {
+						"value": "[parameters('ls_datalake_properties_typeProperties_tenant')]"
+					},
+					"ls_datalake_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ls_datalake_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_restAPI_properties_typeProperties_url": {
+						"value": "[parameters('ls_restAPI_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "declass-adf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'declass-adf_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "declass-adf_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'declass-adf_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "declass-adf_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"managertriggernew_properties_typeProperties_scope": {
+						"value": "[parameters('managertriggernew_properties_typeProperties_scope')]"
+					},
+					"managertriggernew1_properties_typeProperties_scope": {
+						"value": "[parameters('managertriggernew1_properties_typeProperties_scope')]"
+					},
+					"schedule_properties_Scheduledpipeline_parameters_schema": {
+						"value": "[parameters('schedule_properties_Scheduledpipeline_parameters_schema')]"
+					},
+					"schedule_properties_Scheduledpipeline_parameters_table": {
+						"value": "[parameters('schedule_properties_Scheduledpipeline_parameters_table')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'declass-adf_ArmTemplate_2')]"
+			]
+		}
+	]
+}

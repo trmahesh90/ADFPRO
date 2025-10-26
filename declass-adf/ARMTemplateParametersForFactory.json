@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "declass-adf"
+		},
+		"client_sourcels_servicePrincipalCredential": {
+			"value": ""
+		},
+		"linkedservicedl_servicePrincipalCredential": {
+			"value": ""
+		},
+		"ls_database_password": {
+			"value": ""
+		},
+		"ls_datalake_servicePrincipalCredential": {
+			"value": ""
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/anshlambagit"
+		},
+		"client_sourcels_properties_typeProperties_url": {
+			"value": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"client_sourcels_properties_typeProperties_tenant": {
+			"value": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"client_sourcels_properties_typeProperties_servicePrincipalId": {
+			"value": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"github_ls_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"linkedservicedl_properties_typeProperties_url": {
+			"value": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"linkedservicedl_properties_typeProperties_tenant": {
+			"value": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"linkedservicedl_properties_typeProperties_servicePrincipalId": {
+			"value": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"ls_database_properties_typeProperties_server": {
+			"value": "adflab.database.windows.net"
+		},
+		"ls_database_properties_typeProperties_database": {
+			"value": "ADFpipeline"
+		},
+		"ls_database_properties_typeProperties_userName": {
+			"value": "superuser"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://datafactorystoragenew.dfs.core.windows.net/"
+		},
+		"ls_datalake_properties_typeProperties_tenant": {
+			"value": "458f3409-ba2d-42ac-866e-f752a14ea896"
+		},
+		"ls_datalake_properties_typeProperties_servicePrincipalId": {
+			"value": "fdcc6e02-2a49-41cd-a2d7-c239eb5c8404"
+		},
+		"ls_restAPI_properties_typeProperties_url": {
+			"value": "https://pokeapi.co/api/v2/pokemon"
+		},
+		"managertriggernew_properties_typeProperties_scope": {
+			"value": "/subscriptions/645d062f-d725-46fd-807a-f0f94828c04c/resourceGroups/declass/providers/Microsoft.Storage/storageAccounts/datafactorystoragenew"
+		},
+		"managertriggernew1_properties_typeProperties_scope": {
+			"value": "/subscriptions/645d062f-d725-46fd-807a-f0f94828c04c/resourceGroups/declass/providers/Microsoft.Storage/storageAccounts/datafactorystoragenew"
+		},
+		"schedule_properties_Scheduledpipeline_parameters_schema": {
+			"value": "source"
+		},
+		"schedule_properties_Scheduledpipeline_parameters_table": {
+			"value": "Orders"
+		}
+	}
+}
