@@ -1,0 +1,12 @@
+{
+	"name": "ds_database_new",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adftest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
